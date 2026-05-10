@@ -1,0 +1,117 @@
+--Add 'ai-chat-btn' static id for the button
+--Add below CSS code in the page level inline CSS(Optional only)
+
+#ai-chat-btn,
+#ai-chat-btn.a-Button,
+#ai-chat-btn.t-Button {
+
+  /* Colors */
+  background: #356a78 !important;
+  color: #ffffff !important;
+  border: none !important;
+
+  /* Shape */
+  border-radius: 10px !important;
+  padding: 10px 22px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px !important;
+  font-family: sans-serif !important;
+
+  /* Shadow & transition */
+  box-shadow: 0 3px 12px rgba(232, 80, 58, 0.4) !important;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s !important;
+  cursor: pointer !important;
+
+  /* Optional: add a small rocket/chat icon feel */
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+#ai-chat-btn:hover,
+#ai-chat-btn.a-Button:hover,
+#ai-chat-btn.t-Button:hover {
+  background: #1e4a5c !important;
+  box-shadow: 0 4px 16px rgba(30, 74, 92, 0.4) !important;
+  transform: translateY(-2px) !important;
+  color: #ffffff !important;
+}
+
+#ai-chat-btn:active,
+#ai-chat-btn.a-Button:active,
+#ai-chat-btn.t-Button:active {
+  background: #c83d2a !important;
+  transform: translateY(0px) !important;
+  box-shadow: 0 2px 6px rgba(232, 80, 58, 0.3) !important;
+}
+
+#ai-chat-btn:focus,
+#ai-chat-btn.a-Button:focus,
+#ai-chat-btn.t-Button:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(232, 80, 58, 0.3) !important;
+}
+
+/* ── Option B: Target by Custom CSS Class ───────────────────── */
+.ai-chat-btn,
+.ai-chat-btn.a-Button,
+.ai-chat-btn.t-Button {
+  background: #e8503a !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 10px 22px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px !important;
+  font-family: sans-serif !important;
+  box-shadow: 0 3px 12px rgba(232, 80, 58, 0.4) !important;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.ai-chat-btn:hover,
+.ai-chat-btn.a-Button:hover,
+.ai-chat-btn.t-Button:hover {
+  background: #1e4a5c !important;
+  box-shadow: 0 4px 16px rgba(30, 74, 92, 0.4) !important;
+  transform: translateY(-2px) !important;
+  color: #ffffff !important;
+}
+
+.ai-chat-btn:active,
+.ai-chat-btn.a-Button:active,
+.ai-chat-btn.t-Button:active {
+  background: #c83d2a !important;
+  transform: translateY(0px) !important;
+  box-shadow: 0 2px 6px rgba(232, 80, 58, 0.3) !important;
+}
+
+.ai-chat-btn:focus,
+.ai-chat-btn.a-Button:focus,
+.ai-chat-btn.t-Button:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(232, 80, 58, 0.3) !important;
+}
+
+/* ── Pulse animation on load to draw attention ──────────────── */
+@keyframes ai-btn-pulse {
+  0%   { box-shadow: 0 3px 12px rgba(232,80,58,0.4); }
+  50%  { box-shadow: 0 3px 22px rgba(232,80,58,0.75); }
+  100% { box-shadow: 0 3px 12px rgba(232,80,58,0.4); }
+}
+
+#ai-chat-btn,
+.ai-chat-btn {
+  animation: ai-btn-pulse 2.5s ease-in-out infinite !important;
+}
+
+/* Stop pulsing once hovered — feels cleaner */
+#ai-chat-btn:hover,
+.ai-chat-btn:hover {
+  animation: none !important;
+}
