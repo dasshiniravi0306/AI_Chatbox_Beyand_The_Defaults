@@ -1,0 +1,220 @@
+--AI Chatbox CSS
+--Add in the page level inline CSS
+
+
+/* Dialog / Modal Container */
+.a-Dialog--aiAssistant .a-Dialog-header,
+.a-ChatDialog .a-Dialog-header {
+  background: #1e4a5c !important;
+  border-bottom: 2px solid #e8503a !important;
+  color: #ffffff !important;
+  padding: 14px 20px !important;
+}
+
+.a-Dialog--aiAssistant .a-Dialog-title,
+.a-ChatDialog .a-Dialog-title {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  letter-spacing: 0.3px !important;
+}
+
+.a-Dialog--aiAssistant,
+.a-ChatDialog {
+  background: #f4f3ee !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 40px rgba(26, 37, 53, 0.35) !important;
+  overflow: hidden !important;
+}
+
+/* Close / Header Buttons */
+.a-Dialog--aiAssistant .a-Dialog-closeButton,
+.a-ChatDialog .a-Dialog-closeButton {
+  color: #ffffff !important;
+  opacity: 0.8 !important;
+}
+.a-Dialog--aiAssistant .a-Dialog-closeButton:hover,
+.a-ChatDialog .a-Dialog-closeButton:hover {
+  opacity: 1 !important;
+  color: #e8503a !important;
+}
+
+/* Chat Transcript Area */
+.a-ChatTranscript {
+  background: #f4f3ee !important;
+  padding: 16px 14px !important;
+}
+
+/* AI (Inbound) Message Bubble  */
+.a-ChatItem-row--inbound .a-ChatItem-message {
+  background: #ffffff !important;
+  color: #1a2535 !important;
+  border: 1px solid #dde3e8 !important;
+  border-radius: 4px 14px 14px 14px !important;
+  box-shadow: 0 1px 4px rgba(26,37,53,0.08) !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  padding: 10px 14px !important;
+}
+
+/* User (Outbound) Message Bubble */
+.a-ChatItem-row--outbound .a-ChatItem-message {
+  background: #1e4a5c !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 14px 4px 14px 14px !important;
+  box-shadow: 0 1px 6px rgba(30,74,92,0.25) !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  padding: 10px 14px !important;
+}
+
+/* AI Avatar / Icon */
+.a-ChatItem-avatar {
+  background: #e8503a !important;
+  color: #ffffff !important;
+  border-radius: 50% !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 2px 6px rgba(232,80,58,0.35) !important;
+}
+
+/* Input Area */
+.a-ChatInput {
+  background: #ffffff !important;
+  border-top: 2px solid #1e4a5c !important;
+  padding: 10px 12px !important;
+}
+
+.a-ChatInput-textWrap {
+  background: #f4f3ee !important;
+  border: 1.5px solid #c8d0d8 !important;
+  border-radius: 10px !important;
+  transition: border-color 0.2s !important;
+}
+
+.a-ChatInput-textWrap:focus-within {
+  border-color: #1e4a5c !important;
+  box-shadow: 0 0 0 3px rgba(30,74,92,0.12) !important;
+}
+
+.a-ChatInput-text {
+  background: transparent !important;
+  color: #1a2535 !important;
+  font-size: 14px !important;
+  caret-color: #e8503a !important;
+}
+
+.a-ChatInput-text::placeholder {
+  color: #8a97a6 !important;
+}
+
+/* Send Button */
+.a-ChatInput-button--send {
+  background: #e8503a !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(232,80,58,0.35) !important;
+  transition: background 0.2s, transform 0.1s !important;
+}
+
+.a-ChatInput-button--send:hover {
+  background: #c83d2a !important;
+  transform: scale(1.05) !important;
+}
+
+.a-ChatInput-button--send:disabled {
+  background: #b0b8c1 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Typing / Loading Indicator */
+.a-ChatItem--loading .a-ChatItem-message {
+  background: #ffffff !important;
+  border: 1px solid #dde3e8 !important;
+  border-radius: 4px 14px 14px 14px !important;
+}
+
+.a-ChatItem--loading .a-ChatItem-loadingDot {
+  background: #1e4a5c !important;
+}
+
+/* Scrollbar inside transcript  */
+.a-ChatTranscript::-webkit-scrollbar {
+  width: 5px;
+}
+.a-ChatTranscript::-webkit-scrollbar-track {
+  background: #f4f3ee;
+}
+.a-ChatTranscript::-webkit-scrollbar-thumb {
+  background: #1e4a5c;
+  border-radius: 4px;
+}
+.a-ChatTranscript::-webkit-scrollbar-thumb:hover {
+  background: #e8503a;
+}
+
+/* Quick Prompt Chips (from custom toolbar)  */
+.apex-quick-prompt {
+  border-color: #1e4a5c !important;
+  color: #1e4a5c !important;
+  background: #ffffff !important;
+}
+
+.apex-quick-prompt:hover {
+  background: #1e4a5c !important;
+  color: #ffffff !important;
+}
+
+/* Mic Button  */
+#apex-mic-btn {
+  background: #1e4a5c !important;
+  box-shadow: 0 2px 8px rgba(30,74,92,0.35) !important;
+}
+
+#apex-mic-btn.listening {
+  background: #e8503a !important;
+}
+
+/* Toolbar & Export */
+#apex-chat-toolbar {
+  background: #f4f3ee !important;
+  border-top: 1.5px solid #dde3e8 !important;
+}
+
+.apex-tool-btn:hover {
+  background: rgba(30,74,92,0.1) !important;
+  color: #1e4a5c !important;
+}
+
+#apex-export-menu {
+  border-color: #dde3e8 !important;
+}
+
+.apex-export-opt:hover {
+  background: #eaf2f5 !important;
+}
+
+/* Message Action Buttons (Read / Retry)  */
+.apex-msg-action-btn {
+  border-color: #c8d0d8 !important;
+  color: #5a6a7a !important;
+}
+
+.apex-msg-action-btn:hover {
+  background: #eaf2f5 !important;
+  color: #1e4a5c !important;
+  border-color: #1e4a5c !important;
+}
+
+.apex-msg-action-btn.speaking {
+  color: #e8503a !important;
+  border-color: #e8503a !important;
+}
+
+/*  Timestamp*/
+.apex-msg-time {
+  color: #8a97a6 !important;
+}
