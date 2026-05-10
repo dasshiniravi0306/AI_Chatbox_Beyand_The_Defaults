@@ -1,0 +1,29 @@
+//Create dynamic action in page load
+//Add Execute javascript true action and paste the below code
+
+function bootChatFeatures() {
+  injectChatStyles();
+
+  var bootObserver = new MutationObserver(function () {
+    var ready = document.querySelector('div.a-ChatInput-actions') &&
+                document.querySelector('div.a-ChatInput-textWrap') &&
+                document.querySelector('div.a-ChatTranscript');
+    if (!ready) return;
+
+    initAllChatFeatures();
+    watchTranscript();
+    bootObserver.disconnect();
+    console.log('All chat features ready');
+  });
+
+  bootObserver.observe(document.body, { childList: true, subtree: true });
+
+  // Try immediately in case dialog already open
+  if (document.querySelector('div.a-ChatInput-actions') &&
+      document.querySelector('div.a-ChatTranscript')) {
+    initAllChatFeatures();
+    watchTranscript();
+  }
+}
+
+bootChatFeatures();
